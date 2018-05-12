@@ -44,7 +44,7 @@ echo $dueDate->format('c'); // 2018-05-11T13:23:42+00:00
 
 ```bash
 composer global require shakahl/due-php
-due help
+due calculate "2018-05-11 11:23:42" 7
 ```
 
 ## Testing
