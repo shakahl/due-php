@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists(__DIR__.'/../../autoload.php')) {
+    require __DIR__.'/../../autoload.php';
+} else {
+    require __DIR__.'/../vendor/autoload.php';
+}
+
+use Shakahl\Due\Console\Command\CalculateCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+$command = new CalculateCommand();
+$application->add($command);
+$application->setDefaultCommand($command->getName());
+$application->run();
