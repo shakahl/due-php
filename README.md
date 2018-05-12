@@ -32,7 +32,7 @@ use Shakahl\Due\DueDateCalculator;
 $calculator = DueDateCalculator::make();
 
 $calculator->setDayStart(9);
-$calculator->setDayEnd(9);
+$calculator->setDayEnd(17);
 
 $dueDate = $calculator->calculate('2018-05-11 11:23:42', 7);
 
