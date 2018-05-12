@@ -43,7 +43,6 @@ class CalculateCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         try {
-
             $date = $input->getArgument('date');
             $hours = $input->getArgument('hours');
 
@@ -53,7 +52,7 @@ class CalculateCommand extends Command
 
             $calculator = new DueDateCalculator();
 
-            $due = $calculator($input->getArgument('date'),$hours);
+            $due = $calculator($input->getArgument('date'), $hours);
 
             $result = [
                 'date' => date('c', strtotime($date)),
@@ -62,7 +61,6 @@ class CalculateCommand extends Command
             ];
 
             $output->writeln(json_encode($result, JSON_PRETTY_PRINT));
-
         } catch (\InvalidDateTimeFormatException $e) {
             $this->error($output, 'Invalid date format: ' . $date);
         } catch (\DueDateCalculatorException $e) {
