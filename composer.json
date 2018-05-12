@@ -1,6 +1,5 @@
 {
   "name": "shakahl/due-php",
-  "version": "1.0.0",
   "type": "library",
   "license": "MIT",
   "description": "Due date calculator written in PHP",
