@@ -22,11 +22,11 @@ The program reads the currently reported problems (bugs) from an issue tracking 
 
 ### As a library
 
-``` php
+```bash
 composer require shakahl/due-php
 ```
 
-```
+```php
 use Shakahl\Due\DueDateCalculator;
 
 $calculator = DueDateCalculator::make();
@@ -42,14 +42,14 @@ echo $dueDate->format('c'); // 2018-05-11T13:23:42+00:00
 
 ### CLI - Command line interface
 
-``` php
+```bash
 composer global require shakahl/due-php
 due help
 ```
 
 ## Testing
 
-``` bash
+```bash
 $ composer test
 ```
 
